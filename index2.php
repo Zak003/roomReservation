@@ -57,8 +57,37 @@ function whileSQL($con, $day, $time){
       include("navbar.php");
       ?>
         </div>
+      <table class="tabela">
+        <tr><td style="border: none"><div class="container">
+                                        <img src="pictures/room_1.jpg" alt="Avatar" class="image"> <p class="tekst_slike"> Room 1 </p> 
+                                        <div class="overlay">
+                                          <div class="text">Free termins</div>
+                                        </div>
+                                      </div>
 
-        <div class="calendar">
+                                      <div class="container">
+                                        <img src="pictures/room_1.jpg" alt="Avatar" class="image"> <p class="tekst_slike"> Room 2 </p> 
+                                        <div class="overlay">
+                                          <div class="text">Free termins</div>
+                                        </div>
+                                      </div>
+
+                                      <div class="container">
+                                        <img src="pictures/room_1.jpg" alt="Avatar" class="image"> <p class="tekst_slike"> Room 3 </p> 
+                                        <div class="overlay">
+                                          <div class="text">Free termins</div>
+                                        </div>
+                                      </div>
+
+                                      <div class="container">
+                                        <img src="pictures/room_1.jpg" alt="Avatar" class="image"> <p class="tekst_slike"> Room 4 </p> 
+                                        <div class="overlay">
+                                          <div class="text">Free termins</div>
+                                        </div>
+                                      </div>
+      </td>
+        
+      <td style="width: 80%" style="border: none"> <div class="calendar">
 
             <header>
                 <a href="rezervacija.php"><button class="secondary" style="align-self: flex-start; flex: 0 0 1">Add
@@ -160,9 +189,8 @@ function whileSQL($con, $day, $time){
                         </tbody>
                     </table>
                 </div>
-            </div>
+            </div></tr>  </table>
         </div>
-
 
     </div>
     <div class="content">
