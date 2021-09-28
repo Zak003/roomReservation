@@ -35,10 +35,13 @@ if (isset($_POST["prijava"]) && isset($_SESSION["prijavljen"]) != 1) {
       $_SESSION["prijavljen"] = 1;
       $_SESSION["admin"] = $row["admin"];
       $_SESSION["id"] = $row["id"];
+      //echo "<script>alert('Login successful.');location.href=\"index2.php\";</script>";
       header('Location: index2.php');
       $yes = 1;
-      break;
-    } else {
+      //break;
+    } 
+    else {
+      //echo "<script>alert('Something went wrong. Please try again with login.');location.href=\"prijava.php\";</script>";
       header('Location: prijava.php');
     }
   }
@@ -105,9 +108,7 @@ if(isset($_POST["rezerviraj"]) && $_SESSION["prijavljen"] == 1){
   {
     $sql = "INSERT INTO reservations (name, date, end_time, room_id, user_id) VALUES ('$ime', '$datum', '$cas', '$prostor_id', '$id')";
     mysqli_query($con, $sql);
-    echo "New record created successfully";
-    sleep(2);
-    header('Location: index2.php');
+    echo "<script>alert('Reservation successfully submitted.');location.href=\"index2.php\";</script>";
   }
   else
   {
