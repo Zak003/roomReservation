@@ -52,15 +52,40 @@ if ($_SESSION["prijavljen"] != 1) {
           <select class="form-control" name="prostor_id" class="prostori_drop">
             <?php
             //$kraj_id = $_POST["kraj_id"];
-            $result = mysqli_query($con, "SELECT * FROM rooms");
-            while ($row = mysqli_fetch_assoc($result)) {
+            /*$result = mysqli_query($con, "SELECT * FROM rooms");
+            while ($row = mysqli_fetch_assoc($result)) {*/
+              if(isset($_GET['ajdi_sobe']))
+              {
+                $id_sobe=$_GET['ajdi_sobe'];
+                $result2 = mysqli_query($con, "SELECT * FROM rooms WHERE id=$id_sobe");
+                while ($row2 = mysqli_fetch_assoc($result2))
+                {
+                  $prostor_ime = $row2['name'];
+                  $prostor_id = $row2["id"];
+                  $floor_id = $row2["floor_id"];
 
-              $prostor_ime = $row['name'];
+                  echo "<option value='$prostor_id'>$prostor_ime, Floor: $floor_id</option>";
+                }
+              }
+              else
+              {
+                $result = mysqli_query($con, "SELECT * FROM rooms");
+                while ($row = mysqli_fetch_assoc($result)) 
+                {
+                  $prostor_ime = $row['name'];
+                  $prostor_id = $row["id"];
+                  $floor_id = $row["floor_id"];
+
+                  echo "<option value='$prostor_id'>$prostor_ime, Floor: $floor_id</option>";
+                }
+              }
+            
+            /*$prostor_ime = $row['name'];
               $prostor_id = $row["id"];
               $floor_id = $row["floor_id"];
 
-              echo "<option value='$prostor_id'>$prostor_ime, Floor: $floor_id</option>";
-            }
+              echo "<option value='$prostor_id'>$prostor_ime, Floor: $floor_id</option>";*/
+            //}
             ?>
           </select>
           <div class="ime">
@@ -96,7 +121,7 @@ if ($_SESSION["prijavljen"] != 1) {
             <p class="date" style="color:white">Select end time of your reservation:</p>
             <div class="form-group">
               <div style="width: 100%;">
-                <input required style="width: 100%; margin: auto; text-align: center" name="cas" class="form-control"  type="datetime-local" id="example-time-input" value="<?php echo "$Rez"?>" min="<?php echo "$Rez"?>">
+                <input required style="width: 100%; margin: auto; text-align: center" name="cas" class="form-control"  type="datetime-local" id="example-time-input" value="<?php echo "$Rez"?>" min="<?php echo "$min"?>">
           
           </div>
           </div>

@@ -82,7 +82,7 @@ include("functions.php");
                         } ?>
                     </tbody>
                 </table>
-                <a href="index2.php"><button> Show on calendar </button></a>
+                <a href="index2.php"><button class="vserezervacije_button"> Show on calendar </button></a>
             </div>
         </div>
     </div>

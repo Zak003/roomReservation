@@ -31,6 +31,7 @@
     box-sizing: border-box;
 
     height: 100vh;
+    
 
 }
 
@@ -149,7 +150,8 @@ header h1 {
 
 tbody {
 
-    position: relative;
+    /*lahka spremenis position: relative;*/
+   /* position: relative;*/
 
     top: 50px;
 
@@ -165,7 +167,7 @@ table {
 
     height: 100%;
 
-    border-collapse: collapse;
+    /*border-collapse: collapse;*/
 
     table-layout: fixed;
 
@@ -189,7 +191,7 @@ table {
 
     border: 0;
 
-    position: relative;
+    /*position: relative;*/
 
     top: 40px;
 
@@ -362,7 +364,67 @@ tbody tr td {
     z-index: 2;
 
     padding: 0.5rem;
-    margin: 5px;
+   /* margin: 5px;*/
+
+    overflow-x: hidden;
+
+    transition: all 0.2s;
+
+    cursor: pointer;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: -5px;
+    height: 40px;
+
+}
+
+
+/* preizkus s barvami */
+.drugi_event {
+
+    background: #fc0000;
+
+    color: white;
+
+    border-radius: 2px;
+
+    text-align: left;
+
+    font-size: 0.875rem;
+
+    z-index: 2;
+
+    padding: 0.5rem;
+    /*margin: 5px;*/
+
+    overflow-x: hidden;
+
+    transition: all 0.2s;
+
+    cursor: pointer;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: -5px;
+    height: 40px;
+
+}
+
+.tretji_event {
+
+    background: #15fc00;
+
+    color: white;
+
+    border-radius: 2px;
+
+    text-align: left;
+
+    font-size: 0.875rem;
+
+    z-index: 2;
+
+    padding: 0.5rem;
+    /*margin: 5px;*/
 
     overflow-x: hidden;
 
@@ -370,15 +432,84 @@ tbody tr td {
 
     cursor: pointer;
 
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: -5px;
+    height: 40px;
 }
+
+.cetrti_event {
+
+    background: #fc00e7;
+
+    color: white;
+
+    border-radius: 2px;
+
+    text-align: left;
+
+    font-size: 0.875rem;
+
+    z-index: 2;
+
+    padding: 0.5rem;
+    /*margin: 5px;*/
+
+    overflow-x: hidden;
+
+    transition: all 0.2s;
+
+    cursor: pointer;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: -5px;
+    height: 40px;
+
+}
+.text_overlay 
+{ 
+    /*visibility: hidden;*/
+    display:none;
+}
+
+.event:hover .text_overlay {
+    display: inline;
+    height: 40px;
+    width: auto;
+    /*background-color: black;*/
+    
+  }
+
+.drugi_event:hover .text_overlay {
+    display: inline;
+    height: 40px;
+    width: auto;
+    /*background-color: black;*/
+    
+  }
+
+  .tretji_event:hover .text_overlay {
+    display: inline;
+    height: 40px;
+    width: auto;
+    /*background-color: black;*/
+    
+  }
+  .cetrti_event:hover .text_overlay {
+    display: inline;
+    height: 40px;
+    width: auto;
+    /*background-color: black;*/
+    
+  }
 
 
 
 .event:hover {
 
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    /*box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 
-    background: #00B4FC;
+    background: #00B4FC;*/
 
 }
 
